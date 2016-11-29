@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:remove="all">Total Registration</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        Hello,
+        <p th:text="${name}">
+            Peter Static!
+        </p>
+        <p th:if="${name.length() > 50}">
+            Wow! You've got a long e-mail (more than 50 chars)!
+        </p>
+        <p>  
+            You have been successfully create your account on <b>Total Registration</b> on
+            <span th:text="${#temporals.format(#temporals.createNow(), 'dd-MMM-yyyy HH:mm')}">today</span>
+        </p>    
+        <p>
+            This link will expire on
+            <span th:text="${expiration}">tomorrow</span>            
+        </p>                   
+
+        Please activate your account by clicking the below link
+        <p th:text="${activationlink}">
+            Activation link!
+        </p>           
+        <p>
+            Regards, <br />
+            <em>The Total Registration Team</em>
+        </p>
+    </body>
+</html>
