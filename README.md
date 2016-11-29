@@ -1,6 +1,6 @@
 # SpringBootSecurity
 
-TotalRegistration1:
+TotalRegistration1 Kickoff:
   - register
       - password strength (client side, JS)
       - password confirmation (Hibernate validation)
@@ -12,3 +12,9 @@ TotalRegistration1:
 TotalRegistration2 (WIP):
   - captcha
   - ...
+
+Bonus:
+  - Hibernate bytecode enhancement plugin activated
+  - embedded JMS activated
+  - HikariCP activated
+  
