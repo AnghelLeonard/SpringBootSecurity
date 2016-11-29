@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 public interface UserRepository extends JpaRepository<User, Long> {
 
     @Transactional(readOnly = true)
-    @Query(value = "SELECT p.password, p.enabled, p.roles FROM users p WHERE p.email = ?1", nativeQuery = true)
+    @Query(value = "SELECT p.password, p.enabled, p.roles FROM User p WHERE p.email = ?1")
     String findUserCredentialsEmail(String email);
 
     @Modifying
