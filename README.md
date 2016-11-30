@@ -14,7 +14,7 @@ TotalRegistration2 Kickoff:
   
 TotalRegistration3 (WIP):
   - adding "forgot password"
-  - adding "change password"
+  - adding "reset password"
 
 Bonus:
   - Hibernate bytecode enhancement plugin activated
