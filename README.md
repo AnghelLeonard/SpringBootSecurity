@@ -9,9 +9,12 @@ TotalRegistration1 Kickoff:
   - login (two roles)
   - logout
 
-TotalRegistration2 (WIP):
-  - captcha
-  - ...
+TotalRegistration2:
+  - added reCAPTCHA for registration form (https://developers.google.com/recaptcha/docs/start)
+  
+TotalRegistration3 (WIP):
+  - adding "forgot password"
+  - adding "change password"
 
 Bonus:
   - Hibernate bytecode enhancement plugin activated
