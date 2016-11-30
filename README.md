@@ -9,7 +9,7 @@ TotalRegistration1 Kickoff:
   - login (two roles)
   - logout
 
-TotalRegistration2:
+TotalRegistration2 Kickoff:
   - added reCAPTCHA for registration form (https://developers.google.com/recaptcha/docs/start)
   
 TotalRegistration3 (WIP):
