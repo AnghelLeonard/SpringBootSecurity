@@ -90,8 +90,7 @@ public class UserService implements IUserService {
                 if (resetpassword.equals(newpassword.getReset())) {                                             
                     final int status = userRepository.
                             newUserPassword(passwordEncoder.encode(newpassword.getPassword()),
-                                    newpassword.getReset(),
-                                    decrypted.substring(0, decrypted.indexOf(" ")));
+                                    decrypted.substring(0, decrypted.indexOf(" ")), newpassword.getReset());
                     if (status == 1) {
                         return;
                     }
