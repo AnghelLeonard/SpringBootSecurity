@@ -12,10 +12,12 @@ TotalRegistration1 Kickoff:
 TotalRegistration2 Kickoff:
   - added reCAPTCHA for registration form (https://developers.google.com/recaptcha/docs/start)
   
-TotalRegistration3 (WIP):
-  - adding "forgot password"
-  - adding "reset password"
-
+TotalRegistration3 Kickoff:
+  - added forgot(reset) password via 24h reset link (encrypted token, not stored in db, thymeleaf e-mail template)
+  
+TotalRegistration4 (WIP):  
+  - remember me
+  
 Bonus:
   - Hibernate bytecode enhancement plugin activated
   - embedded JMS activated
