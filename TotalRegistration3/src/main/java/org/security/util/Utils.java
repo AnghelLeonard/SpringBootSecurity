@@ -28,7 +28,7 @@ public final class Utils {
 
     public static boolean checkThenAgainstNow(String then) {
         final LocalDateTime now = LocalDateTime.now();
-        LocalDateTime expiration = LocalDateTime.
+        final LocalDateTime expiration = LocalDateTime.
                 parse(then, DateTimeFormatter.ofPattern("dd-MMM-yyyy-HH:mm"));
 
         return now.isBefore(expiration);
