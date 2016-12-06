@@ -1,0 +1,51 @@
+spring:
+    datasource:               
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/totaldev?createDatabaseIfNotExist=true
+        username: root
+        password: java797b  
+        type: com.zaxxer.hikari.HikariDataSource 
+        hikari:      
+            connectionTimeout: 10000
+            connectionTestQuery: SELECT 1 FROM DUAL
+            maxLifetime: 1800000
+            minimumIdle: 10
+            maximumPoolSize: 10
+            idleTimeout: 0
+            poolName: TotalRegistrationPool
+    jpa:
+        database-platform: org.hibernate.dialect.MySQL5Dialect            
+        open-in-view: false
+        properties:    
+            javax:
+                persistence:
+                    validation:
+                        mode: none
+            hibernate:                
+                show_sql: true
+                format_sql: true
+                use_sql_comments: true
+                globally_quoted_identifiers: true                
+        hibernate:
+            ddl-auto: none
+            connection.provider_class: org.hibernate.hikaricp.internal.HikariCPConnectionProvider   
+    mail:
+        host: localhost
+        port: 25   
+        
+server:
+    error:        
+        whitelabel:
+            enabled: false
+            
+# custom settings           
+org:
+    security:
+        url:
+            activate: http://localhost:8080/activate/
+            newpassword: http://localhost:8080/newpassword/
+            
+recaptcha:
+    validation:
+        secretKey: 6LfSXw0UAAAAAHhqL0VfFsDo23-8Y8u6gD_PQrOk            
+                       

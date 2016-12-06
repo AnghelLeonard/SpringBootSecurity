@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:remove="all">Total Registration</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        Hello,
+        <p th:text="${name}">
+            Peter Static!
+        </p>
+        <p th:if="${name.length() > 50}">
+            Wow! You've got a long e-mail (more than 50 chars)!
+        </p>
+        <p>  
+            You required to reset your password on <b>Total Registration</b> on
+            <span th:text="${#temporals.format(#temporals.createNow(), 'dd-MMM-yyyy HH:mm')}">today</span>
+        </p>    
+        <p>
+            Please, follow this link:<br/>
+            <code>
+                <span th:text="${resetLink}">Reset link!</span>            
+            </code>
+        </p>                   
+        ...and use the temporal password from below:
+        <code>
+            <p th:text="${resetPassword}">
+                password
+            </p>  
+        </code>
+        <hr/>
+        This link will be active until:
+        <p th:text="${expiration}">
+            tomorrow
+        </p>           
+        <hr/>
+        <p>
+            Regards, <br />
+            <em>The Total Registration Team</em>
+        </p>
+    </body>
+</html>
