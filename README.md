@@ -22,4 +22,5 @@ General facts:
   - need a SMTP server (for testing Fake SMTP Server will do the job)
   - Bootstrap starting point
   
-  [Register form:](https://github.com/AnghelLeonard/SpringBootSecurity/blob/master/register.png)
+  [logo]: https://github.com/AnghelLeonard/SpringBootSecurity/blob/master/register.png "Register form"
+ 
