@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+    <head>
+        <title>Kickoff</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="spring boot, security"/>             
+
+        <link href="css/bootstrap.css" th:href="@{css/bootstrap.css}" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/style.css" th:href="@{css/style.css}" rel="stylesheet" type="text/css" media="all" />        
+    </head>
+    <body>
+        <!--header-->
+        <div class="header">
+            <div class="container">
+                <div class="head">
+                    <div class=" logo">
+                        <a href="index.html"><img src="images/logo.png" alt=""/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-top">
+                <div class="container">
+                    <div class="col-sm-7 col-md-offset-2  header-login">
+                        <ul>
+                            <li><a href="/login">Login</a></li>
+                            <li><a href="/register">Register</a></li>                            
+                            <li>
+                                <div style="color: sienna;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    Login as
+                                    <strong sec:authorize="!isAuthenticated()">
+                                        <a style="color: tomato;" href="/login">
+                                            guest
+                                        </a>
+                                    </strong>
+                                    <strong sec:authorize="isAuthenticated()">
+                                        <a style="color: tomato;" href="/profile">
+                                            <span sec:authentication="name"></span>
+                                        </a>
+                                        &nbsp;|&nbsp;
+                                        <a style="color: whitesmoke;" href="/logout">
+                                            Logout
+                                        </a>
+                                    </strong>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>                    
+                </div>
+            </div>   
+        </div>   
+        <div class="container">
+            <div class="four">
+                <h3>Welcome</h3>               
+            </div>
+        </div>       
+    </body>
+</html>

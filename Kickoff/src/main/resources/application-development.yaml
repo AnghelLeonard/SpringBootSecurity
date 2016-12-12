@@ -1,0 +1,13 @@
+# Path to project
+project:
+    base-dir: file:///D:/registration/Kickoff
+
+# Templates reloading during development
+# Static resources reloading during development
+spring:
+    thymeleaf:
+        prefix: ${project.base-dir}/src/main/resources/templates/
+        cache: false
+    resources:
+        static-locations: ${project.base-dir}/src/main/resources/static/
+        cache-period: 0

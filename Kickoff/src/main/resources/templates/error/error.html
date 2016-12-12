@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+    <head>
+        <title>Kickoff</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="spring boot, security"/>             
+
+        <link href="css/bootstrap.css" th:href="@{css/bootstrap.css}" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/style.css" th:href="@{css/style.css}" rel="stylesheet" type="text/css" media="all" />        
+    </head>
+    <body>          
+        <div class="banner-top">
+            <div class="container">
+                <h1>Oh snap!</h1>
+                <em></em>
+                <h2><a href="/">Home</a></h2>                
+            </div>
+        </div>      
+        <div class="container">
+            <div class="four">
+                <h5>There is an error</h5>
+                <p th:utext="${errorMessage}" style="font-size: 16px; color: #000;"><strong>Error</strong></p>
+                <a href="/" class="hvr-skew-backward">Home</a>                
+            </div>
+        </div>                       
+    </body>
+</html>
