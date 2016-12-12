@@ -9,6 +9,7 @@
   - logout
   - persistent "remember me"
   - forget(reset) password via 24h reset link (encrypted token, not stored in db, thymeleaf e-mail template) 
+  - send a new link in case of expiration of current link
   - reCAPTCHA for registration form (https://developers.google.com/recaptcha/docs/start)
   - OAuth (WIP)
 
@@ -19,8 +20,8 @@ General facts:
   - Hibernate bytecode enhancement plugin activated
   - embedded JMS activated
   - HikariCP activated
-  - need a SMTP server (for testing Fake SMTP Server will do the job)
-  - Bootstrap starting point
+  - need a SMTP server (for testing Fake SMTP Server will do the job) - this must run in order to run the application
+  - Bootstrap kickoff
   
 ![alt text][logo]
 [logo]: https://github.com/AnghelLeonard/SpringBootSecurity/blob/master/register.png "Register form"
