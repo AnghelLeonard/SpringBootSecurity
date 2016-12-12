@@ -1,4 +1,4 @@
-# Spring Boot Security Application
+# Spring Boot Security Kickoff Application
 
   - register
       - password strength (client side, JS)
