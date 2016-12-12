@@ -14,6 +14,8 @@
 
 General facts: 
 
+  - Spring Boot 1.4.2.RELEASE
+  - Hibernate 5
   - Hibernate bytecode enhancement plugin activated
   - embedded JMS activated
   - HikariCP activated
