@@ -45,7 +45,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/css/**", "/js/**", "/images/**", "/fonts/**",
                         "/favicon.ico").permitAll()
                 .antMatchers("/member/**").hasAuthority("ROLE_MEMBER")
-                //.antMatchers("/admin/**").hasAuthority("ROLE_ADMIN")
+                .antMatchers("/admin/**").hasAuthority("ROLE_ADMIN")
                 .anyRequest().fullyAuthenticated()
                 .and()
                 .logout().logoutUrl("/logout").logoutSuccessUrl("/login?logout")
