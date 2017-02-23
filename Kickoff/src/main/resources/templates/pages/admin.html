@@ -11,7 +11,15 @@
             Logged user: <span sec:authentication="name">Me</span>
             Roles: <span sec:authentication="principal.authorities">[none]</span>
 
-            <p>Click <a th:href="@{/logout}">Logout</a></p>
-        </div>        
+            <p>Click <a onclick="logoutJS();">Logout</a></p>
+        </div> 
+        <script>
+            function logoutJS() {
+                document.forms["logoutForm"].submit();
+            }
+        </script>
+        <form id="logoutForm" th:action="@{/logout}" method="POST">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        </form>
     </body>
 </html>

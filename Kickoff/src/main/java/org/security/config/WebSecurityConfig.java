@@ -38,30 +38,30 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .formLogin().loginPage("/login").successForwardUrl("/").defaultSuccessUrl("/")
                 .failureUrl("/login?error").usernameParameter("email").passwordParameter("password").permitAll()
-            .and()
+                .and()
                 .authorizeRequests()
                 .antMatchers("/", "/login/**", "/pending/**", "/activate/**",
                         "/register/**", "/reset/**", "/newpassword/**",
                         "/css/**", "/js/**", "/images/**", "/fonts/**",
                         "/favicon.ico").permitAll()
                 .antMatchers("/member/**").hasAuthority("ROLE_MEMBER")
-                .antMatchers("/admin/**").hasAuthority("ROLE_ADMIN")
+                //.antMatchers("/admin/**").hasAuthority("ROLE_ADMIN")
                 .anyRequest().fullyAuthenticated()
-            .and()
+                .and()
                 .logout().logoutUrl("/logout").logoutSuccessUrl("/login?logout")
                 .invalidateHttpSession(true).deleteCookies("JSESSIONID").permitAll()
-            .and()
+                .and()
                 .exceptionHandling()
-            .and()
+                .and()
                 .sessionManagement().maximumSessions(1).maxSessionsPreventsLogin(false)
-            .and()
+                .and()
                 .sessionFixation().none()
-            .and()
+                .and()
                 .rememberMe().tokenRepository(persistentTokenRepository())
                 .userDetailsService(userDetailsService).tokenValiditySeconds(seconds) // 2 minutes
                 .rememberMeParameter("remember-me")
-            .and()
-                .csrf().disable();
+                .and()
+                .csrf();
         // @formatter:on
     }
 
@@ -82,5 +82,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
-    }
+    }    
 }

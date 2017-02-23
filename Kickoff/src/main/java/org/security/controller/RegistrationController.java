@@ -34,6 +34,11 @@ public class RegistrationController {
     @Autowired
     private RecaptchaValidator recaptchaValidator;
 
+    @GetMapping("/login")
+    public String login() {
+        return "credentials/login";
+    }
+    
     @GetMapping("/register")
     public String registrationShow(final User user) {
         return "/credentials/register";
