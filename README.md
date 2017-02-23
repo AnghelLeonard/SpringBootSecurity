@@ -11,7 +11,7 @@
   - forget(reset) password via 24h reset link (encrypted token, not stored in db, thymeleaf e-mail template) 
   - send a new link in case of expiration of current link
   - reCAPTCHA for registration form (https://developers.google.com/recaptcha/docs/start)
-  - CRSF protection
+  - CSRF protection
   - OAuth (WIP)
 
 General facts: 
