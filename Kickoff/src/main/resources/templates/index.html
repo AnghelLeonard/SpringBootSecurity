@@ -40,7 +40,7 @@
                                             <span sec:authentication="name"></span>
                                         </a>
                                         &nbsp;|&nbsp;
-                                        <a style="color: whitesmoke;" href="/logout">
+                                        <a style="color: whitesmoke;" onclick="logoutJS();">
                                             Logout
                                         </a>
                                     </strong>
@@ -55,6 +55,14 @@
             <div class="four">
                 <h3>Welcome</h3>               
             </div>
-        </div>       
+        </div>     
+        
+        <script>
+            function logoutJS() {
+                document.forms["logoutForm"].submit();
+            }
+        </script>
+        <form id="logoutForm" th:action="@{/logout}" method="POST">            
+        </form>
     </body>
 </html>

@@ -1,6 +1,6 @@
 # Path to project
 project:
-    base-dir: file:///D:/registration/Kickoff
+    base-dir: file:///D:/registration/SpringBootSecurity/Kickoff
 
 # Templates reloading during development
 # Static resources reloading during development

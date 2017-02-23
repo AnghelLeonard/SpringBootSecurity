@@ -18,8 +18,7 @@
                 document.forms["logoutForm"].submit();
             }
         </script>
-        <form id="logoutForm" th:action="@{/logout}" method="POST">
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        <form id="logoutForm" th:action="@{/logout}" method="POST">            
         </form>
     </body>
 </html>
