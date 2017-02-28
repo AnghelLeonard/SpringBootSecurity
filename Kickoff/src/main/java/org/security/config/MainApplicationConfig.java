@@ -9,8 +9,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @ComponentScan({"org.security.*"})
-@EnableJpaRepositories("org.security.dao")
-@EntityScan("org.security.model")
+@EnableJpaRepositories({"org.security.dao", "org.security.admin"})
+@EntityScan({"org.security.model", "org.security.admin"})
 @EnableTransactionManagement
 public class MainApplicationConfig {
 

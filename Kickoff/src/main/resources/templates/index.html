@@ -7,8 +7,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="keywords" content="spring boot, security"/>             
 
-        <link href="css/bootstrap.css" th:href="@{css/bootstrap.css}" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/style.css" th:href="@{css/style.css}" rel="stylesheet" type="text/css" media="all" />        
+        <link th:href="@{~/css/bootstrap.css}" rel="stylesheet" type="text/css" media="all" />
+        <link th:href="@{~/css/style.css}" rel="stylesheet" type="text/css" media="all" />        
     </head>
     <body>
         <!--header-->
@@ -16,7 +16,7 @@
             <div class="container">
                 <div class="head">
                     <div class=" logo">
-                        <a href="index.html"><img src="images/logo.png" alt=""/></a>
+                        <a href="/"><img src="images/logo.png" alt=""/></a>
                     </div>
                 </div>
             </div>
@@ -40,23 +40,30 @@
                                             <span sec:authentication="name"></span>
                                         </a>
                                         &nbsp;|&nbsp;
-                                        <a style="color: whitesmoke;" onclick="logoutJS();">
+                                        <a style="color: whitesmoke; cursor: pointer;" onclick="logoutJS();">
                                             Logout
                                         </a>
                                     </strong>
                                 </div>
                             </li>
                         </ul>
-                    </div>                    
+                    </div>  
+                    <div class="col-sm-3 header-social">
+                        <ul>
+                            <li><a href="/member" style="color: yellow;">USER PROTECTED PAGE</a></li>
+                            <li><a href="/admin/panel" style="color: yellow;">ADMIN PANEL</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>   
         </div>   
         <div class="container">
             <div class="four">
                 <h3>Welcome</h3>               
+                <h3 style="font-size: 30px;">to Kickoff Security</h3>           
             </div>
         </div>     
-        
+
         <script>
             function logoutJS() {
                 document.forms["logoutForm"].submit();

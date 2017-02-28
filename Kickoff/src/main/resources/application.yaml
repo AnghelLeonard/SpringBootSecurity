@@ -1,7 +1,7 @@
 spring:
     datasource:               
         driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/db?createDatabaseIfNotExist=true
+        url: jdbc:mysql://localhost:3306/db?createDatabaseIfNotExist=true&useSSL=false
         username: root
         password: java797b  
         type: com.zaxxer.hikari.HikariDataSource 
@@ -12,7 +12,7 @@ spring:
             minimumIdle: 10
             maximumPoolSize: 10
             idleTimeout: 0
-            poolName: ShopinPool
+            poolName: KickoffPool
     jpa:
         database-platform: org.hibernate.dialect.MySQL5Dialect            
         open-in-view: false
@@ -34,8 +34,8 @@ spring:
         port: 25 
         user: none
         password: none
-    #profiles:
-    #    active: development
+    profiles:
+        active: development
         
 server:
     error:        
@@ -62,5 +62,8 @@ number:
         range: ${random.int[11111111,99999999]}   
     rememberme:
         seconds: 120
+admin:
+    email: admin@kickoff.org
+    password: kickoff        
        
                        

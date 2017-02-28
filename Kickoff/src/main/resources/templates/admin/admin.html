@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">    
+    <head>
+        <title>Kickoff</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="spring boot, security"/>             
+
+        <link th:href="@{~/css/bootstrap.css}" rel="stylesheet" type="text/css" media="all" />
+        <link th:href="@{~/css/style.css}" rel="stylesheet" type="text/css" media="all" />        
+    </head>
+    <body>        
+        <div class="header">
+            <div class="container">
+                <div class="head">
+                    <div class=" logo">
+                        <a href="/"><img src="images/logo.png" alt=""/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-top">
+                <div class="container">
+                    <div class="col-sm-7 col-md-offset-2  header-login">                        
+                        <p style="color: white !important;">Administrator</p>                                                                                                     
+                    </div>                    
+                    <div class="col-sm-3 header-social">
+                        <ul>
+                            <li><a href="/member" style="color: yellow;">USER PROTECTED PAGE</a></li>
+                            <li><a href="/admin/panel" style="color: yellow;">ADMIN PANEL</a></li>                            
+                        </ul>
+                    </div>
+                </div>                
+            </div>               
+        </div>   
+
+        <!--login-->
+        <div class="container">            
+            <div class="login">
+                <hr/><h4><strong>Administrator login page</strong></h4><hr/>                
+                <form th:action="@{/admin}" method="POST">                                                                                                
+                    <div class="col-md-6 login-do">
+                        <p th:unless="${param.error == null}" class="alert alert-danger" role="alert">                        
+                            <strong>Oh snap!</strong> Bad credentials!                       
+                        </p> 
+                        <div class="login-mail">
+                            <input type="text" name="email" placeholder="Email" required=""/>
+                            <i  class="glyphicon glyphicon-envelope"></i>
+                        </div>
+                        <div class="login-mail">
+                            <input type="password" name="password" placeholder="Password" required=""/>
+                            <i class="glyphicon glyphicon-lock"></i>
+                        </div>                                                                                                      
+                        <br/>                        
+                        <label class="hvr-skew-backward">
+                            <input name="submit" type="submit" value="login"/>
+                        </label>                                               
+                    </div>                    
+                    <div class="clearfix"> </div>                    
+                </form>
+            </div>
+        </div>       
+    </body>
+</html>

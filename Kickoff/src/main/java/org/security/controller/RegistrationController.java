@@ -38,7 +38,7 @@ public class RegistrationController {
     public String login() {
         return "credentials/login";
     }
-    
+
     @GetMapping("/register")
     public String registrationShow(final User user) {
         return "/credentials/register";

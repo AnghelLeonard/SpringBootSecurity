@@ -13,14 +13,14 @@
             Logged user: <span sec:authentication="name">Me</span>
             Roles: <span sec:authentication="principal.authorities">[none]</span>
 
-            <p>Click <a onclick="logoutJS();">Logout</a></p>
-        </div>
+            <h3><a onclick="logoutJS();" style="cursor: pointer; color: #23527c;">Logout</a></h3>
+            <h3><a href="/admin/panel" style="cursor: pointer; color: salmon;">See ADMINISTRATOR PANEL</a></h3>
+        </div>        
+        <form id="logoutForm" th:action="@{/logout}" method="POST"/>
         <script>
             function logoutJS() {
                 document.forms["logoutForm"].submit();
             }
         </script>
-        <form id="logoutForm" th:action="@{/logout}" method="POST">            
-        </form>
     </body>
 </html>

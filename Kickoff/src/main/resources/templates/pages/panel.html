@@ -5,20 +5,22 @@
         <title>Admin</title>
     </head>
     <body>
-        <h1>Admin page</h1>
+        <h1>Admin panel</h1>
+
+        This content is only shown to the administrator of this website:
 
         <div sec:authorize="isAuthenticated()">  
-            Logged user: <span sec:authentication="name">Me</span>
+            Logged admin: <span sec:authentication="name">Me</span>
             Roles: <span sec:authentication="principal.authorities">[none]</span>
 
-            <p>Click <a onclick="logoutJS();">Logout</a></p>
-        </div> 
+            <h3><a onclick="logoutJS();" style="cursor: pointer; color: #23527c;">Logout</a></h3>
+            <h3><a href="/member" style="cursor: pointer; color: salmon;">See MEMBER PROTECTED PAGE</a></h3>
+        </div>        
+        <form id="logoutForm" th:action="@{/admin/logout}" method="POST"/>
         <script>
             function logoutJS() {
                 document.forms["logoutForm"].submit();
             }
         </script>
-        <form id="logoutForm" th:action="@{/logout}" method="POST">            
-        </form>
     </body>
 </html>

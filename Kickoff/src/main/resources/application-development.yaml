@@ -1,13 +1,13 @@
 # Path to project
 project:
-    base-dir: file:///D:/registration/SpringBootSecurity/Kickoff
+    base-dir: classpath:.
 
 # Templates reloading during development
 # Static resources reloading during development
 spring:
     thymeleaf:
-        prefix: ${project.base-dir}/src/main/resources/templates/
+        prefix: ${project.base-dir}/templates/
         cache: false
     resources:
-        static-locations: ${project.base-dir}/src/main/resources/static/
+        static-locations: ${project.base-dir}/static/
         cache-period: 0
