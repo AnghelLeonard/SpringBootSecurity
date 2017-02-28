@@ -14,7 +14,7 @@
   - CSRF protection
   - two forms login 
    - user login form with real database (ROLE_MEMBER)
-   - admin login form with in-memory credentials; user: admin@kickoff.org, password: kickoff (ROLE_ADMIN)
+   - admin login form with in-memory credentials (ROLE_ADMIN); user: admin@kickoff.org, password: kickoff
   - OAuth (WIP)
 
 General facts: 
