@@ -12,7 +12,7 @@
   - send a new link in case of expiration of current link
   - reCAPTCHA for registration form (https://developers.google.com/recaptcha/docs/start)
   - CSRF protection
-  - two form login 
+  - two forms login 
    - user login form with real database (ROLE_MEMBER)
    - admin login form with in-memory credentials; user: admin@kickoff.org, password: kickoff (ROLE_ADMIN)
   - OAuth (WIP)
