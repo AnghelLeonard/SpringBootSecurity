@@ -13,8 +13,8 @@
   - reCAPTCHA for registration form (https://developers.google.com/recaptcha/docs/start)
   - CSRF protection
   - two form login 
-        - user login form with real database (ROLE_MEMBER)
-        - admin login form with in-memory credentials; user: admin@kickoff.org, password: kickoff (ROLE_ADMIN)
+   - user login form with real database (ROLE_MEMBER)
+   - admin login form with in-memory credentials; user: admin@kickoff.org, password: kickoff (ROLE_ADMIN)
   - OAuth (WIP)
 
 General facts: 
